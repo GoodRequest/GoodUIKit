@@ -1,5 +1,5 @@
 //
-//  GRCompatible.swift
+//  GRUICompatible.swift
 //  
 //
 //  Created by Dominik Pethö on 4/30/19.
@@ -20,7 +20,7 @@ public struct GRActive<Base> {
 }
 
 /// A type that has reactive extensions.
-public protocol GRCompatible {
+public protocol GRUICompatible {
     /// Extended type
     associatedtype GRActiveBase
 
@@ -31,7 +31,7 @@ public protocol GRCompatible {
     var gr: GRActive<GRActiveBase> { get set }
 }
 
-public extension GRCompatible {
+public extension GRUICompatible {
     /// Reactive extensions.
     static var gr: GRActive<Self>.Type {
         get {
@@ -56,4 +56,4 @@ public extension GRCompatible {
 }
 
 /// Extend NSObject with `gr` proxy.
-extension NSObject: GRCompatible { }
+extension NSObject: GRUICompatible { }

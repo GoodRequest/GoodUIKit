@@ -8,7 +8,7 @@
 
 import UIKit
 import Combine
-import GRCompatible
+import GRUICompatible
 
 public enum GestureType {
 

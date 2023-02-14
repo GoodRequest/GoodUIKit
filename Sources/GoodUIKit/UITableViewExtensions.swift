@@ -6,7 +6,7 @@
 //
 
 
-import GRCompatible
+import GRUICompatible
 import UIKit
 
 public extension GRActive where Base: UITableView {

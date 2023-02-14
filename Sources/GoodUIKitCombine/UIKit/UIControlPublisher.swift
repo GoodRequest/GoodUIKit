@@ -8,7 +8,7 @@
 
 import UIKit
 import Combine
-import GRCompatible
+import GRUICompatible
 
 @available(iOS 13.0, *)
 public struct UIControlPublisher<Control: UIControl>: Publisher {

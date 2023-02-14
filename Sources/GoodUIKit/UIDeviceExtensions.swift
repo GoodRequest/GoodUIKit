@@ -8,7 +8,7 @@
 
 
 import UIKit
-import GRCompatible
+import GRUICompatible
 
 public extension GRActive where Base: UIDevice {
 

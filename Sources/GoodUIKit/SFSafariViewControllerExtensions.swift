@@ -9,7 +9,7 @@
 
 import UIKit
 import SafariServices
-import GRCompatible
+import GRUICompatible
 
 public extension GRActive where Base: SFSafariViewController {
 

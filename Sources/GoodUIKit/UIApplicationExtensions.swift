@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-import GRCompatible
+import GRUICompatible
 
 public enum UIApplicationUrlType {
 

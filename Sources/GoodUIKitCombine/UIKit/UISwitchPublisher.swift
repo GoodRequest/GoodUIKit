@@ -6,7 +6,7 @@
 //
 
 import Combine
-import GRCompatible
+import GRUICompatible
 import UIKit
 
 public extension GRActive where Base: UISwitch {

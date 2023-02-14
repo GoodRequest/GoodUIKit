@@ -9,7 +9,7 @@
 
 import UIKit
 import MapKit
-import GRCompatible
+import GRUICompatible
 
 // MARK: - Maps
 

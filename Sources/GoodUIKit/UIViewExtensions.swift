@@ -8,7 +8,7 @@
 
 
 import UIKit
-import GRCompatible
+import GRUICompatible
 import CoreGraphics
 
 // MARK: - Initialization from XIB

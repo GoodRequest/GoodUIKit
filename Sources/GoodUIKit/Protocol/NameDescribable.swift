@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import GRCompatible
+import GRUICompatible
 
 /**
 Name describable allow your to take typename from any type extending the protocol

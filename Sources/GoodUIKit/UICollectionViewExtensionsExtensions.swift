@@ -6,7 +6,7 @@
 //
 
 
-import GRCompatible
+import GRUICompatible
 import UIKit
 
 // MARK: - Cell Registration

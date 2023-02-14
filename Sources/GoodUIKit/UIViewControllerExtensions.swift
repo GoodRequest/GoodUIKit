@@ -8,7 +8,7 @@
 
 
 import UIKit
-import GRCompatible
+import GRUICompatible
 import Combine
 
 // MARK: - Embedable

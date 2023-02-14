@@ -7,7 +7,7 @@
 
 import UIKit
 import Combine
-import GRCompatible
+import GRUICompatible
 
 @available(iOS 13.0, *)
 public struct UIBarButtonPublisher<BarButtonItem: UIBarButtonItem>: Publisher {
