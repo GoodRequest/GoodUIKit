@@ -40,6 +40,12 @@ let package = Package(
             dependencies: [
                 .target(name: "GRUICompatible")
             ]
+        ),
+        .testTarget(
+            name: "GoodCombineExtensionsTests",
+            dependencies: [
+                .target(name: "GoodUIKitCombine")
+            ]
         )
     ]
 )
