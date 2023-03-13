@@ -10,7 +10,7 @@
 import UIKit
 import GRUICompatible
 
-public extension GRActive where Base: UIColor {
+public extension GRUIActive where Base: UIColor {
 
     static func from(hex: String) -> UIColor {
         var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()

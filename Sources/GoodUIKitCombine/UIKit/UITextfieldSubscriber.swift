@@ -36,7 +36,7 @@ final public class UITextFieldSubscription<SubscriberType: Subscriber, TextField
     }
 }
 
-public extension GRActive where Base: UITextField {
+public extension GRUIActive where Base: UITextField {
 
     func eventPublisher(for event: UIControl.Event) -> UITextFieldPublisher<UITextField> {
         UITextFieldPublisher(control: base, event: event)
@@ -44,7 +44,7 @@ public extension GRActive where Base: UITextField {
 
 }
 
-public extension GRActive where Base: UITextField {
+public extension GRUIActive where Base: UITextField {
 
     var textPublisher: AnyPublisher<String?, Never> {
         Publishers.ControlProperty(control: base, events: [.valueChanged, .allEditingEvents], keyPath: \.text)

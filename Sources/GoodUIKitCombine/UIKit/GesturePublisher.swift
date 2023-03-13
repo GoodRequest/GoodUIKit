@@ -68,7 +68,7 @@ public struct GesturePublisher: Publisher {
 }
 
 @available(iOS 13.0, *)
-public extension GRActive where Base: UIView {
+public extension GRUIActive where Base: UIView {
 
     func gesturePublisher(_ gestureType: GestureType) -> GesturePublisher {
         GesturePublisher(view: base, gestureType: gestureType)

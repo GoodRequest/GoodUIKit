@@ -9,7 +9,7 @@
 import UIKit
 import GRUICompatible
 
-public extension GRActive where Base: UIStoryboard {
+public extension GRUIActive where Base: UIStoryboard {
 
     func instantiateViewController<T: UIViewController>(withClass clas: T.Type) -> T? {
         return base.instantiateViewController(withIdentifier: String(describing: clas)) as? T

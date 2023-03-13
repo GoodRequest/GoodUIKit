@@ -18,7 +18,7 @@ public enum UIApplicationUrlType {
 
 }
 
-public extension GRActive where Base: UIApplication {
+public extension GRUIActive where Base: UIApplication {
 
     @available(iOS 13.0, *)
     var currentStatusBarFrame: CGRect? {

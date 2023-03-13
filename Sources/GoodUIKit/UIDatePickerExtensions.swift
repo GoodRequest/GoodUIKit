@@ -10,7 +10,7 @@
 import UIKit
 import GRUICompatible
 
-public extension GRActive where Base: UIDatePicker {
+public extension GRUIActive where Base: UIDatePicker {
 
     var dateBinding: Date {
         get {

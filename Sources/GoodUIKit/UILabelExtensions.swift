@@ -10,7 +10,7 @@
 import UIKit
 import GRUICompatible
 
-public extension GRActive where Base: UILabel {
+public extension GRUIActive where Base: UILabel {
 
 
     /**

@@ -9,7 +9,7 @@
 import GRUICompatible
 import UIKit
 
-public extension GRActive where Base: UITableView {
+public extension GRUIActive where Base: UITableView {
 
     /// Register reusable cell with specified class type.
     func registerCell<T: UITableViewCell>(fromClass type: T.Type) {
@@ -63,7 +63,7 @@ public extension GRActive where Base: UITableView {
 
 // MARK: - Table Header/Footer Layout
 
-public extension GRActive where Base: UITableView {
+public extension GRUIActive where Base: UITableView {
 
     func sizeHeaderToFit() {
         if let headerView = base.tableHeaderView {

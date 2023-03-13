@@ -5,9 +5,9 @@
 //  Created by Dominik Pethö on 4/30/19.
 //
 
-import Foundation
+import UIKit
 
-public struct GRActive<Base> {
+public struct GRUIActive<Base> {
     /// Base object to extend.
     public let base: Base
 
@@ -25,17 +25,17 @@ public protocol GRUICompatible {
     associatedtype GRActiveBase
 
     /// GRActive extensions.
-    static var gr: GRActive<GRActiveBase>.Type { get set }
+    static var gr: GRUIActive<GRActiveBase>.Type { get set }
 
     /// GRActive extensions.
-    var gr: GRActive<GRActiveBase> { get set }
+    var gr: GRUIActive<GRActiveBase> { get set }
 }
 
 public extension GRUICompatible {
     /// Reactive extensions.
-    static var gr: GRActive<Self>.Type {
+    static var gr: GRUIActive<Self>.Type {
         get {
-            return GRActive<Self>.self
+            return GRUIActive<Self>.self
         }
         // swiftlint:disable:next unused_setter_value
         set {
@@ -44,9 +44,9 @@ public extension GRUICompatible {
     }
 
     /// Reactive extensions.
-    var gr: GRActive<Self> {
+    var gr: GRUIActive<Self> {
         get {
-            return GRActive(self)
+            return GRUIActive(self)
         }
         // swiftlint:disable:next unused_setter_value
         set {
@@ -55,5 +55,9 @@ public extension GRUICompatible {
     }
 }
 
-/// Extend NSObject with `gr` proxy.
-extension NSObject: GRUICompatible { }
+/// Extend UI Objects with `gr` proxy.
+extension UIView: GRUICompatible { }
+extension UIViewController: GRUICompatible { }
+extension UIColor: GRUICompatible { }
+extension UIBarItem: GRUICompatible { }
+extension UIApplication: GRUICompatible { }

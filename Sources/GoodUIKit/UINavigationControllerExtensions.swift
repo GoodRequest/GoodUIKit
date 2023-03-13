@@ -12,7 +12,7 @@ import GRUICompatible
 
 // MARK: - Navigation Controller
 
-public extension GRActive where Base: UINavigationController {
+public extension GRUIActive where Base: UINavigationController {
 
     func pushViewController(
         _ viewController: UIViewController,

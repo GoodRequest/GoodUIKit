@@ -33,7 +33,7 @@ public struct UIBarButtonPublisher<BarButtonItem: UIBarButtonItem>: Publisher {
 }
 
 @available(iOS 13.0, *)
-public extension GRActive where Base: UIBarButtonItem {
+public extension GRUIActive where Base: UIBarButtonItem {
 
     func tapPublisher(for event: UIControl.Event) -> UIBarButtonPublisher<UIBarButtonItem> {
         UIBarButtonPublisher(barButtonItem: base, event: event)

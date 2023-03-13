@@ -9,7 +9,7 @@
 import UIKit
 import GRUICompatible
 
-public extension GRActive where Base == UIScrollView {
+public extension GRUIActive where Base == UIScrollView {
 
     var isRefreshing: Bool {
         return base.refreshControl?.isRefreshing ?? false

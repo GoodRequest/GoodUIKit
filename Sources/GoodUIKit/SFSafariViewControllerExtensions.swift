@@ -11,7 +11,7 @@ import UIKit
 import SafariServices
 import GRUICompatible
 
-public extension GRActive where Base: SFSafariViewController {
+public extension GRUIActive where Base: SFSafariViewController {
 
     static func `default`(url: URL, preferredControlTintColor: UIColor) -> SFSafariViewController {
         let controller = SFSafariViewController(url: url)

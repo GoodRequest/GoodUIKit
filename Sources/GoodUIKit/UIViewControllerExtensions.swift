@@ -13,7 +13,7 @@ import Combine
 
 // MARK: - Embedable
 
-public extension GRActive where Base: UIViewController {
+public extension GRUIActive where Base: UIViewController {
     
     func embed(viewController: UIViewController, in containerView: UIView) {
         viewController.view.frame = containerView.bounds
@@ -26,14 +26,14 @@ public extension GRActive where Base: UIViewController {
 
 // MARK: - Instantiable
 
-public extension GRActive where Base: UIViewController {
+public extension GRUIActive where Base: UIViewController {
     
     static func makeInstance(name: String? = nil) -> Base {
         var viewControllerName: String
         if let name = name {
             viewControllerName = name
         } else {
-            viewControllerName = Base.gr.typeName
+            viewControllerName = String(describing: type(of: self))
         }
         
         let storyboard = UIStoryboard(name: viewControllerName, bundle: nil)
@@ -82,7 +82,7 @@ public enum KeyboardState: Equatable {
 
 }
 
-public extension GRActive where Base: UIViewController {
+public extension GRUIActive where Base: UIViewController {
 
     var keyboardStatePublisher: AnyPublisher<KeyboardState, Never> {
         let showNotification = UIApplication.keyboardWillChangeFrameNotification
