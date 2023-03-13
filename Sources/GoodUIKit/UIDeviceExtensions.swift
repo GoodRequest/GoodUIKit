@@ -10,7 +10,7 @@
 import UIKit
 import GRUICompatible
 
-public extension GRActive where Base: UIDevice {
+public extension GRUIActive where Base: UIDevice {
 
     var device: GRDevice {
         GRDevice(

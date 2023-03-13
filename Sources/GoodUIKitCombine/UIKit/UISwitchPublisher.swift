@@ -9,7 +9,7 @@ import Combine
 import GRUICompatible
 import UIKit
 
-public extension GRActive where Base: UISwitch {
+public extension GRUIActive where Base: UISwitch {
 
     var isOnPublisher: AnyPublisher<Bool, Never> {
         Publishers.ControlProperty(control: base, events: .valueChanged, keyPath: \.isOn)

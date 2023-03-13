@@ -16,12 +16,12 @@ import CoreGraphics
 public extension UIView {
     
     static func loadFromNib() -> Self {
-        return GRActive.loadNib(self)
+        return GRUIActive.loadNib(self)
     }
     
 }
 
-public extension GRActive where Base: UIView {
+public extension GRUIActive where Base: UIView {
     
     static func loadNib<A>(_ owner: AnyObject, bundle: Bundle = Bundle.main) -> A {
         guard let nibName = NSStringFromClass(Base.classForCoder()).components(separatedBy: ".").last else {
@@ -57,7 +57,7 @@ public extension GRActive where Base: UIView {
 
 // MARK: - Mask rendering
 
-public extension GRActive where Base: UIView {
+public extension GRUIActive where Base: UIView {
 
     @available(*, deprecated, message: "Deprecated, use circleMasked() instead")
     var circleMaskImage: UIView {
@@ -163,7 +163,7 @@ public extension UIView {
 
 // MARK: - UIView Animations
 
-public extension GRActive where Base: UIView {
+public extension GRUIActive where Base: UIView {
 
     /// Animates shake with view
     func shakeView(duration: CFTimeInterval = 0.02, repeatCount: Float = 8.0, offset: CGFloat = 5.0) {
@@ -221,7 +221,7 @@ public extension GRActive where Base: UIView {
 
 }
 
-public extension GRActive where Base: UIView {
+public extension GRUIActive where Base: UIView {
 
     enum ViewAnimationType {
 
@@ -270,9 +270,9 @@ public extension GRActive where Base: UIView {
 
 // MARK: - Blurring
 
-public extension GRActive where Base: UIView {
+public extension GRUIActive where Base: UIView {
     
-    private final class BlurredImageView: UIImageView, NameDescribable {}
+    private final class BlurredImageView: UIImageView {}
 
     func blur(_ blurRadius: Double = 3.5, animated: Bool = false, duration: CGFloat = 0.3) {
         removeBlur()
@@ -356,7 +356,7 @@ public extension GRActive where Base: UIView {
 
 // MARK: - Layer
 
-public extension GRActive where Base: UIView {
+public extension GRUIActive where Base: UIView {
 
     enum GradientDirection {
 
@@ -445,7 +445,7 @@ public extension GRActive where Base: UIView {
 
 // MARK: - Dimming
 
-public extension GRActive where Base: UIView {
+public extension GRUIActive where Base: UIView {
 
     private final class DimView: UIView {
 
@@ -543,7 +543,7 @@ extension UIView {
 
 // MARK: - Subview search
 
-public extension GRActive where Base: UIView {
+public extension GRUIActive where Base: UIView {
 
     func firstSubview<T>(forType type: T.Type) -> T? {
         for subview in base.subviews where subview is T {

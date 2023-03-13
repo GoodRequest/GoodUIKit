@@ -13,7 +13,7 @@ import GRUICompatible
 
 // MARK: - Maps
 
-public extension GRActive where Base: UIAlertController {
+public extension GRUIActive where Base: UIAlertController {
 
     // swiftlint:disable function_parameter_count
     static func create(

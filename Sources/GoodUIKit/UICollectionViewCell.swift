@@ -10,7 +10,7 @@
 import UIKit
 import GRUICompatible
 
-public extension GRActive where Base: UICollectionViewCell {
+public extension GRUIActive where Base: UICollectionViewCell {
 
     func animate(selected: Bool) {
         UIViewPropertyAnimator.runningPropertyAnimator(

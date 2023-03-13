@@ -37,7 +37,7 @@ public struct UIControlPublisher<Control: UIControl>: Publisher {
 }
 
 @available(iOS 13.0, *)
-public extension GRActive where Base: UIControl {
+public extension GRUIActive where Base: UIControl {
 
     func publisher(for event: UIControl.Event) -> UIControlPublisher<UIControl> {
         UIControlPublisher(control: base, event: event)

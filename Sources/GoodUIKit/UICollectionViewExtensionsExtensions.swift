@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - Cell Registration
 
-public extension GRActive where Base: UICollectionView {
+public extension GRUIActive where Base: UICollectionView {
 
     /// Register reusable cell with specified class type.
     func registerCell<T: UICollectionViewCell>(fromClass type: T.Type) {
@@ -41,7 +41,7 @@ public extension GRActive where Base: UICollectionView {
 
 // MARK: - Cell Dequeueing
 
-public extension GRActive where Base: UICollectionView {
+public extension GRUIActive where Base: UICollectionView {
 
     // swiftlint:disable force_cast
 

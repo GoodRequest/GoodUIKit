@@ -9,7 +9,7 @@
 import UIKit
 import GRUICompatible
 
-public extension GRActive where Base == UIRefreshControl {
+public extension GRUIActive where Base == UIRefreshControl {
 
     func endRefreshing() {
         if base.isRefreshing {
