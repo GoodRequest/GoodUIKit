@@ -5,7 +5,6 @@
 //  Created by Andrej Jasso on 29/09/2021.
 //
 
-
 import GRUICompatible
 import UIKit
 
@@ -25,6 +24,10 @@ public extension GRUIActive where Base: UITableView {
 
     /// Register reusable header footer view with specified class type.
     func registerHeaderFooterView<T: UITableViewHeaderFooterView>(fromClass type: T.Type) {
+        guard Bundle.main.path(forResource: String(describing: type), ofType: "nib") != nil else {
+            base.register(T.self, forHeaderFooterViewReuseIdentifier: String(describing: type))
+            return
+        }
         base.register(
             UINib(nibName: String(describing: type), bundle: nil),
             forHeaderFooterViewReuseIdentifier: String(describing: type)
