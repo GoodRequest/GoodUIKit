@@ -20,11 +20,19 @@ public enum UIApplicationUrlType {
 
 public extension GRUIActive where Base: UIApplication {
 
+    /// Returns status bar frame for currently active window.
+    /// See: ``activeWindow``
+    ///
+    /// Important: Use only on main thread.
     @available(iOS 13.0, *)
     var currentStatusBarFrame: CGRect? {
         return activeWindow?.windowScene?.statusBarManager?.statusBarFrame
     }
 
+
+    /// First active window for all connected scenes in the application.
+    ///
+    /// Important: Use only on main thread.
     @available(iOS 13.0, *)
     var activeWindow: UIWindow? {
         UIApplication.shared.connectedScenes
